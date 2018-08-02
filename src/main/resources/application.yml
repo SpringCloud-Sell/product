@@ -1,3 +1,6 @@
+server:
+  port: 8751
+
 eureka:
   client:
     service-url:
