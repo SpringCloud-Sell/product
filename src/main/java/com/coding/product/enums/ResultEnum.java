@@ -18,8 +18,10 @@ import lombok.Getter;
 public enum ResultEnum {
     /** 0 - 成功. */
     SUCCESS(0, "成功"),
-    /** 1- 参数不正确. */
-    PARAM_ERROR(1, "参数不正确"),
+    /** 1 - 商品不存在 */
+    PRODUCT_NOT_EXIST(1, "商品不存在"),
+    /** 2 - 库存有误. */
+    PRODUCT_STOCK_ERROR(2, "库存有误"),
     ;
 
     private Integer code;

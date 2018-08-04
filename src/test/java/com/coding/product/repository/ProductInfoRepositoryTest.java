@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -19,6 +20,13 @@ public class ProductInfoRepositoryTest extends ProductApplicationTests {
     @Test
     public void findByProductStatus() throws Exception {
         List<ProductInfo> list = repository.findByProductStatus(0);
+        Assert.assertTrue(list.size() > 0);
+    }
+
+    @Test
+    public void findByProductIdIn() throws Exception {
+        List<ProductInfo> list =
+                repository.findByProductIdIn(Arrays.asList("10000001", "10000002"));
         Assert.assertTrue(list.size() > 0);
     }
 }
