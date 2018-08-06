@@ -32,7 +32,7 @@ public interface ProductClient {
     List<ProductInfoOutput> listForOrder(@RequestBody List<String> productIdList);
 
     @PostMapping("/product/decreaseStock")
-    void decreaseStock(@RequestBody List<DecreaseStockInput> cartDTOList);
+    void decreaseStock(@RequestBody List<DecreaseStockInput> decreaseStockInputList);
 
     @Component
     class ProductClientFallback implements ProductClient {
